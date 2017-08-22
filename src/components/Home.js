@@ -70,7 +70,7 @@ class Home extends Component {
     }
 
     showTwitterTimeline() {
-        window.twttr.ready(() => {
+        /*window.twttr.ready(() => {
             window.twttr.widgets.createTimeline(
                 "897941606237704192",
                 document.getElementById("twitter-timeline-container"),
@@ -84,7 +84,7 @@ class Home extends Component {
                     this.props.onTimelineLoad();
                 }
             });
-        });
+        });*/
     }
 
     setNoiseOrigin(noiseOrigin) {

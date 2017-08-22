@@ -1,4 +1,5 @@
-var debug = false;
+//var debug = false;
+var debug = true;
 var backendUrlPrefix = (debug ? 'http://localhost:6253' : '');
 var frontendUrlPrefix = (debug ? 'http://localhost:3000' : '');
 
@@ -88,12 +89,12 @@ var Config = {
         urlPrefix: backendUrlPrefix + '/api/stat'
     },
     twitter: {
-        urlPrefix: backendUrlPrefix + '/api/twitter',
-        callback: frontendUrlPrefix + '/#/twitter',
+        urlPrefix: '', //backendUrlPrefix + '/api/twitter',
+        callback: '', //frontendUrlPrefix + '/#/twitter',
         defaultText: 'A.I.で二次元キャラ生成！　Automatically created by #MakeGirlsMoe: http://make.girls.moe'
     },
     geoip: {
-        url: backendUrlPrefix + '/api/geoip',
+        url: '', //backendUrlPrefix + '/api/geoip',
         timeout: 2000
     }
 };

@@ -27,8 +27,9 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch&flags=gated"></script>
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch&flags=gated"></script-->
+    <script src="%PUBLIC_URL%/polyfill.min.js"></script>
     <script src="%PUBLIC_URL%/modules/webdnn/inflate.min.js"></script>
     <script src="%PUBLIC_URL%/modules/webdnn/webdnn.es5.js"></script>
 
@@ -42,7 +43,7 @@
     <div id="root"></div>
 
     <!-- Twitter -->
-    <script>window.twttr = (function(d, s, id) {
+    <!--script>window.twttr = (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
             t = window.twttr || {};
         if (d.getElementById(id)) return t;
@@ -57,6 +58,6 @@
         };
 
         return t;
-    }(document, "script", "twitter-wjs"));</script>
+    }(document, "script", "twitter-wjs"));</script-->
 </body>
 </html>

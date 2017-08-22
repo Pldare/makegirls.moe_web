@@ -1,3 +1,11 @@
+# 如何运行
+
+```
+npm install
+npm start
+```
+
+
 # MakeGirls.moe-Web
 
 This repo contains the front-end part of [make.girls.moe](http://make.girls.moe/).
