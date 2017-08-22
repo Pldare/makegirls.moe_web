@@ -33,40 +33,10 @@ class Generator extends Component {
                     {this.props.results ? this.props.results.map((result, index) => this.renderResultCanvas(result, index)) : null}
                 </div>
                 <ButtonPrimary
-                    text={this.props.gan.isRunning ? 'Generating...' : 'Generate'}
+                    text={this.props.gan.isRunning ? '生成中...' : '生成'}
                     disabled={this.props.gan.isRunning || !this.props.gan.isReady}
                     onClick={this.props.onGenerateClick} />
 
-
-                <CSSTransitionGroup
-                    transitionName="rating-transition"
-                    transitionEnterTimeout={600}
-                    transitionLeaveTimeout={600}>
-
-                    {this.props.results.length > 0 &&
-                    <div className="rating btn-rating">
-                        <div className="rating-text" style={{color: this.props.rating === 0 ? 'black' : 'green' }}>{this.props.rating === 0 ? '' : 'Thank you!'}</div>
-                        <RatingButtons value={this.props.rating} onChange={(value) => this.onRatingClick(value)}/>
-                    </div>
-                    }
-
-                </CSSTransitionGroup>
-
-                <CSSTransitionGroup
-                    transitionName="twitter-transition"
-                    transitionEnterTimeout={600}
-                    transitionLeaveTimeout={600}>
-
-                    {this.props.results.length > 0 &&
-                    <button
-                        className="btn btn-default btn-twitter"
-                        onClick={this.props.onTwitterClick} >
-                        <img className="twitter-logo" src={twitterLogo} alt="Twitter Logo" />
-                        <span>Share on Twitter</span>
-                    </button>
-                    }
-
-                </CSSTransitionGroup>
 
             </div>
         );

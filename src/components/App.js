@@ -15,7 +15,6 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Navbar location={this.props.location}/>
                 <div className="main-content">
                     <Switch>
                         <Route path="/(|about|news|tips)" render={() =>

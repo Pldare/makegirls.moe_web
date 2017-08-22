@@ -12,7 +12,8 @@ var Config = {
         {
             key: 'hair_color',
             type: 'multiple',
-            options: ['blonde', 'brown', 'black', 'blue', 'pink', 'purple', 'green', 'red', 'silver', 'white', 'orange', 'aqua', 'grey'],
+            //options: ['blonde', 'brown', 'black', 'blue', 'pink', 'purple', 'green', 'red', 'silver', 'white', 'orange', 'aqua', 'grey'],
+            options: ['金黄色', '棕色', '黑色', '蓝色', '粉色', '紫色', '绿色', '红色', '银色', '白色', '橙色', '海蓝色', '灰色'],
             offset: 0,
             prob: [0.15968645,  0.21305391,  0.15491921,  0.10523116,  0.07953927,
                 0.09508879,  0.03567429,  0.07733163,  0.03157895,  0.01833307,
@@ -21,7 +22,8 @@ var Config = {
         {
             key: 'hair_style',
             type: 'multiple',
-            options: ['long_hair', 'short_hair', 'twin_tail',  'drill_hair', 'ponytail'],
+            //options: ['long_hair', 'short_hair', 'twin_tail',  'drill_hair', 'ponytail'],
+            options: ['长发', '短发', '双马尾',  '卷发', '马尾'],
             offset: 13,
             //prob: [0.52989922,  0.37101264,  0.12567589,  0.00291153,  0.00847864],
             isIndependent: true,
@@ -30,7 +32,8 @@ var Config = {
         {
             key: 'eye_color',
             type: 'multiple',
-            options: ['blue', 'red', 'brown', 'green', 'purple', 'yellow', 'pink', 'aqua', 'black', 'orange'],
+            //options: ['blue', 'red', 'brown', 'green', 'purple', 'yellow', 'pink', 'aqua', 'black', 'orange'],
+            options: ['蓝色', '红色', '棕色', '绿色', '紫色', '黄色', '粉色', '海蓝色', '黑色', '橙色'],
             offset: 24,
             prob: [0.28350664,  0.15760678,  0.17862742,  0.13412254,  0.14212126,
                 0.0543913 ,  0.01020637,  0.00617501,  0.03167493,  0.00156775]

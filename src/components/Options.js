@@ -96,20 +96,20 @@ class Options extends Component {
         );
     }
 
-    renderSelector(key) {
+    renderSelector(key, title) {
         var option = this.options[key];
         if (option.type === 'multiple') {
-            return this.renderMultipleSelector(key, option.options);
+            return this.renderMultipleSelector(key, option.options, title);
         }
         else {
-            return this.renderBinarySelector(key);
+            return this.renderBinarySelector(key, title);
         }
     }
 
     renderNoiseVisualizer() {
         return (
             <div className="col-xs-6 col-sm-4 option">
-                <h5>Current Noise</h5>
+                <h5>当前噪声</h5>
                 <NoiseVisualizer noise={this.props.noise} />
             </div>
         );
@@ -118,10 +118,10 @@ class Options extends Component {
     renderNoiseImportExport() {
         return (
             <div className="col-xs-6 col-sm-4 option">
-                <h5>Noise Import/Export</h5>
+                <h5>噪声导入导出</h5>
                 {new ButtonGroup().renderButtonGroup([
-                    {name: 'Import', onClick: () => this.onNoiseImportClick()},
-                    {name: 'Export', onClick: () => this.onNoiseExportClick()}
+                    {name: '导入', onClick: () => this.onNoiseImportClick()},
+                    {name: '导出', onClick: () => this.onNoiseExportClick()}
                 ])}
                 <input type="file" accept="image/*" ref="noiseUploader" style={{display: "none"}} onChange={(event) => this.readNoise(event)} onClick={(event)=> {event.target.value = null}} />
             </div>
@@ -135,20 +135,20 @@ class Options extends Component {
                     <h3 className="col-xs-12" style={{color: Config.colors.theme}}>Options</h3>
                 </div>
                 <div className="row">
-                    {this.renderSelector('hair_color')}
-                    {this.renderSelector('hair_style')}
-                    {this.renderSelector('eye_color')}
+                    {this.renderSelector('hair_color', '头发颜色')}
+                    {this.renderSelector('hair_style', '头发风格')}
+                    {this.renderSelector('eye_color', '眼睛颜色')}
                 </div>
                 <div className="row">
-                    {this.renderSelector('blush')}
-                    {this.renderSelector('smile')}
-                    {this.renderSelector('open_mouth')}
-                    {this.renderSelector('hat')}
-                    {this.renderSelector('ribbon')}
-                    {this.renderSelector('glasses')}
+                    {this.renderSelector('blush', '腮红')}
+                    {this.renderSelector('smile', '微笑')}
+                    {this.renderSelector('open_mouth', '开口')}
+                    {this.renderSelector('hat', '帽子')}
+                    {this.renderSelector('ribbon', '丝带')}
+                    {this.renderSelector('glasses', '眼镜')}
                 </div>
                 <div className="row">
-                    {this.renderNoiseSelector('noise')}
+                    {this.renderNoiseSelector('noise', '噪声')}
                     {this.props.noise && this.renderNoiseVisualizer()}
                     {this.renderNoiseImportExport()}
                 </div>
